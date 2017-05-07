@@ -1,0 +1,14 @@
+[Unit]
+Description=Smartphone Desktop Integration Bridge
+Documentation=man:deskcon
+
+[Service]
+Type=dbus
+BusName=net.screenfreeze.desktopconnector
+WorkingDirectory=/usr/share/deskcon-server
+ExecStart=/usr/bin/python2 deskcon-server
+PIDFile=%h/.deskcon/server.pid
+SyslogIdentifier=deskcon-server
+
+[Install]
+WantedBy=graphical.target
