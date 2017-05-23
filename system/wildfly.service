@@ -2,6 +2,7 @@
 Description=WildFly
 
 [Service]
+SyslogIdentifier=wildfly
 ExecStart=/usr/bin/java \
           -D"[Standalone]" \
           -Dorg.jboss.boot.log.file=/var/log/wildfly/wildfly.log \
