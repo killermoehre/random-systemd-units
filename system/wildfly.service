@@ -5,7 +5,7 @@ Description=WildFly
 SyslogIdentifier=wildfly
 ExecStart=/usr/bin/java \
           -D"[Standalone]" \
-          -Dorg.jboss.boot.log.file=/var/log/wildfly/wildfly.log \
+          -Dorg.jboss.boot.log.file=/opt/wildfly/standalone/log/ \
           -Dlogging.configuration=file:/opt/wildfly/standalone/configuration/logging.properties \
           -jar /opt/wildfly/jboss-modules.jar \
           -mp /opt/wildfly/modules/ \
