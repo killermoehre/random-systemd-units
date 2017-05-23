@@ -1,9 +1,0 @@
-[Unit]
-Description=Window matching utility for X
-Documentation=man:devilspie
-
-[Service]
-ExecStart=/usr/bin/devilspie -a
-
-[Install]
-WantedBy=graphical.target

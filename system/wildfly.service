@@ -1,0 +1,18 @@
+[Unit]
+Description=WildFly
+
+[Service]
+ExecStart=/usr/bin/java \
+          -D"[Standalone]" \
+          -Dorg.jboss.boot.log.file=/var/log/wildfly/wildfly.log \
+          -Dlogging.configuration=file:/opt/wildfly/standalone/configuration/logging.properties \
+          -jar /opt/wildfly/jboss-modules.jar \
+          -mp /opt/wildfly/modules/ \
+          org.jboss.as.standalone \
+          -Djboss.home.dir=/opt/wildfly/ \
+          -Djboss.server.base.dir=/opt/wildfly/ \
+          -c /opt/wildfly/standalone/configuration/standalone.xml \
+          -P /opt/wildfly/jboss.properties
+
+[Install]
+WantedBy=multi-user.target
