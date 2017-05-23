@@ -1,7 +1,10 @@
 [Unit]
-Description=WildFly
+Description=flexible, lightweight, managed application runtime
+Documentation=https://docs.jboss.org/author/display/WFLY10/Documentation?_sscc=t
 
 [Service]
+User=wildfly
+Group=wildfly
 SyslogIdentifier=wildfly
 ExecStart=/usr/bin/java \
           -D"[Standalone]" \
