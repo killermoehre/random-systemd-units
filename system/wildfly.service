@@ -11,7 +11,7 @@ ExecStart=/usr/bin/java \
           -mp /opt/wildfly/modules/ \
           org.jboss.as.standalone \
           -Djboss.home.dir=/opt/wildfly/standalone/ \
-          -Djboss.server.base.dir=/opt/wildfly/ \
+          -Djboss.server.base.dir=/opt/wildfly/standalone/ \
           -c /opt/wildfly/standalone/configuration/standalone.xml \
           -P /opt/wildfly/jboss.properties
 
