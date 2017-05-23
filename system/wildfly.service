@@ -12,7 +12,7 @@ ExecStart=/usr/bin/java \
           org.jboss.as.standalone \
           -Djboss.home.dir=/opt/wildfly/standalone/ \
           -Djboss.server.base.dir=/opt/wildfly/standalone/ \
-          -c /opt/wildfly/standalone/configuration/standalone.xml \
+          -c standalone.xml \
           -P /opt/wildfly/jboss.properties
 
 [Install]
