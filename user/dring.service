@@ -1,0 +1,11 @@
+[Unit]
+Description=core daemon for Ring
+Documentation=man:dring
+
+[Service]
+Type=dbus
+BusName=cx.ring.Ring
+ExecStart=/usr/lib/ring/dring -c -p
+
+[Install]
+WantedBy=default.target
