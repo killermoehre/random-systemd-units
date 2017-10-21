@@ -1,0 +1,14 @@
+[Unit]
+Description=Network management for Jocatop softwares
+Documentation=http://assistance.jocatop.fr/viewtopic.php?f=8&t=128
+
+[Service]
+Type=forking
+Environment=LISTENPORT=2000
+EnvironmentFile=-/etc/jocareso/jocareso.conf
+ExecStart=/usr/sbin/jocareso-linux.386 -p${LISTENPORT}
+ExecStop=/usr/sbin/jocareso-linux.386 stop
+User=jocareso
+
+[Install]
+WantedBy=multi-user.target
